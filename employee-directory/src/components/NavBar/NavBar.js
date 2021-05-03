@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../assets/logo192.png'
+import logo from '../../assets/logo192.png'
 
 
-function Header () {
+function NavBar () {
     return(
 <nav className="navbar navbar-dar bg-dark">
   <div className="container-fluid">
@@ -15,4 +15,4 @@ function Header () {
     );
 }
 
-export default Header;
+export default NavBar;

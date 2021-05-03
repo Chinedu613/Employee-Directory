@@ -2,7 +2,7 @@ import React from 'react';
 
 function EmployeeTable(props) {
     return(
-        <table className="table table-hover">
+        <table className="table table-hover table-bordered">
             <thead>
                 <tr>
                     <th scope="col">Image</th>

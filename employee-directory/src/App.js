@@ -1,11 +1,11 @@
 
 import './App.css';
 import React, { Component } from 'react';
-import EmployeeCard from './components/EmployeeCard';
-import Header from './components/Header';
+import EmployeeCard from './components/EmployeeCard/EmployeeCard';
+import NavBar from './components/NavBar/NavBar';
+import SearchArea from './components/SearchArea/SearchArea';
 import Wrapper from './components/Wrapper/index';
-import EmployeeTable from './components/EmployeeTable';
-
+import EmployeeTable from './components/EmployeeTable/EmployeeTable';
 import employees from './employee.json';
 
 class App extends Component {
@@ -17,8 +17,9 @@ class App extends Component {
   render() {
     return (
 <div>
-<Header />
+<NavBar />
   <Wrapper>
+  <SearchArea />
     <EmployeeTable>
    {this.state.employees.map(oneEmployee => ( 
       <EmployeeCard 
