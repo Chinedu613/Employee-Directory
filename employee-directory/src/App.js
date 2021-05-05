@@ -1,18 +1,16 @@
 
 import './App.css';
 import React, { Component } from 'react';
-import EmployeeCard from './components/EmployeeCard/EmployeeCard';
 import NavBar from './components/NavBar/NavBar';
 import SearchArea from './components/SearchArea/SearchArea';
 import Wrapper from './components/Wrapper/index';
-import EmployeeTable from './components/EmployeeTable/EmployeeTable';
-import employees from './employee.json';
+import EmployeeGenie from './components/EmployeeGenie/EmployeeGenie';
+
+
 
 class App extends Component {
   // Setting this.state.employee to the employee json array
-  state = {
-    employees
-  };
+
   
   render() {
     return (
@@ -20,8 +18,9 @@ class App extends Component {
 <NavBar />
   <Wrapper>
   <SearchArea />
-    <EmployeeTable>
-   {this.state.employees.map(oneEmployee => ( 
+
+    <EmployeeGenie>
+  {/*  {this.state.employees.map(oneEmployee => ( 
       <EmployeeCard 
         key={oneEmployee.id.value} 
         firstName={oneEmployee.name.first} 
@@ -29,8 +28,8 @@ class App extends Component {
         picture={oneEmployee.picture.medium} 
         email={oneEmployee.email} 
         phone={oneEmployee.phone} 
-        />))}
-    </EmployeeTable>
+        />))} */}
+    </EmployeeGenie>
   </Wrapper>
 </div>
   );
