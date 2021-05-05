@@ -1,25 +1,40 @@
 import React,{ Component } from 'react';
 import EmployeeTable from '../EmployeeTable/EmployeeTable.js'
-import getRandomEmployee from '../../utils/API';
-
+import  getEmployees from '../../utils/API';
+import SearchArea from '../SearchArea/SearchArea'
 export default class EmployeeGenie extends Component {
     state = {
-        employees: []
+        employees: [],
+        query: " "
     };
 
      async componentDidMount()  {
-        const randomEmployee = await getRandomEmployee();
+        const employeeData = await getEmployees();
         this.setState({
-            employees: randomEmployee.data.results
+            employees: employeeData.data.results
         })
-        console.log(this.state.employees);
-        // console.log(this.state.employees);
+
         return this.state.employees
+        };
+
+        handleInputChange = (e) => {
+            console.log('we"re typing', e.target.value)
+            this.setState({ search: e.target.value });
+        };
+        searchFunction = (e) => {
+            e.preventDefault();
+            console.log(this.state.query);
         }
-        
     render(){
     return(
+        <>
+        <SearchArea search={this.state.query}
+        // Fix Search Bar
+                    // onChange={this.handleInputChange}
+                    // onClick={this.searchFunction}    
+                    />
         <EmployeeTable employees={this.state.employees}/>
+        </>
     );
     }
 }

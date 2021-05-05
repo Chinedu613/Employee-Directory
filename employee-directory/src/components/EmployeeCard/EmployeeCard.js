@@ -10,7 +10,7 @@ function EmployeeCard(props){
                     <td> {props.phone}</td>
                 </tr>
         </tbody>
-        
     );
-}
+};
+
 export default EmployeeCard;

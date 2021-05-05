@@ -17,19 +17,10 @@ class App extends Component {
 <div>
 <NavBar />
   <Wrapper>
-  <SearchArea />
 
-    <EmployeeGenie>
-  {/*  {this.state.employees.map(oneEmployee => ( 
-      <EmployeeCard 
-        key={oneEmployee.id.value} 
-        firstName={oneEmployee.name.first} 
-        lastName={oneEmployee.name.last} 
-        picture={oneEmployee.picture.medium} 
-        email={oneEmployee.email} 
-        phone={oneEmployee.phone} 
-        />))} */}
-    </EmployeeGenie>
+    <EmployeeGenie />
+
+
   </Wrapper>
 </div>
   );

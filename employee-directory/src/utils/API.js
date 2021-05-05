@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const getRandomEmployee = () => {
-    return axios.get("https://randomuser.me/api/?results=15&?nat=us")
+const getEmployees = () => {
+    return axios.get("https://randomuser.me/api/?results=15&nat=us")
 }
 
-export default getRandomEmployee;
+export default getEmployees;

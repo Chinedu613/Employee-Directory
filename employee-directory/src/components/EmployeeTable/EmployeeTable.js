@@ -1,4 +1,5 @@
 import React from "react";
+import EmployeeCard from '../EmployeeCard/EmployeeCard'
 
 function EmployeeTable({ employees }) {
   return (
@@ -11,24 +12,15 @@ function EmployeeTable({ employees }) {
           <th scope="col">Phone</th>
         </tr>
       </thead>
-      <tbody>
-        {employees.map((employee) => {
-          return (
-            <tr key={employee.login.uuid}>
-              <td>
-            
-                <img alt= {employee.name.last} src={employee.picture.medium} />
-              </td>
-              <td>
-                
-                {employee.name.first} {employee.name.last}
-              </td>
-              <td> {employee.email}</td>
-              <td> {employee.phone}</td>
-            </tr>
-          );
-        })}
-      </tbody>
+      {employees.map(oneEmployee => ( 
+      <EmployeeCard 
+        key={oneEmployee.id.value} 
+        firstName={oneEmployee.name.first} 
+        lastName={oneEmployee.name.last} 
+        picture={oneEmployee.picture.medium} 
+        email={oneEmployee.email} 
+        phone={oneEmployee.phone} 
+        />))}
     </table>
   );
 }
