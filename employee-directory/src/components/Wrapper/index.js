@@ -2,7 +2,7 @@ import React from 'react';
 
 function Wrapper(props) {
     return(
-        <main className= "container wrapper">{props.children}</main>
+        <main className= "container-fluid wrapper">{props.children}</main>
     );
 }
 

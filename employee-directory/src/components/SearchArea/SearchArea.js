@@ -1,27 +1,22 @@
 import React from 'react';
-
+import './style.css'
 
 function SearchArea(props, {query}) {
 
 
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col-md-4">Find Employee</div>
-                    <div className="col-md-4 ms-auto">    
+        <div className="container-fluid searcharea">
+            <div className="row justify-content-center">
+                <div className="col-12 d-flex justify-content-center searcharea__title"><h1>Employee Directory</h1></div>
+                    <div className="col-5 ms-auto searcharea__bar">    
                         <form className="d-flex">
                             <input name="searchbar" 
                                 className="form-control me-2" 
                                 type="search"
-                                value={query} 
                                 placeholder="Search" 
-                                aria-label="Search"
-                               // onChange={this.handleInputChange}
+                                aria-label="Search for employee"
+                                onChange={props.handleInputChange}
                                />
-                            <button className="btn btn-outline-success" 
-                            // onClick={this.searchFunction} 
-                            type="submit">Search
-                            </button>
                         </form>
                     </div>
             </div>

@@ -1,0 +1,14 @@
+.searcharea {
+    min-height: 10em ;
+    color: white;
+    background-image: linear-gradient(to right top, #2c73d2, #8c5ebd, #ba4796, #cb3d65, #c34a36);
+}
+.searcharea__bar {
+    height: 5em;
+}
+
+.searcharea__title {
+    margin: .5rem;
+    height: 5em;
+    color: white;
+}

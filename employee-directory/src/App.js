@@ -2,7 +2,6 @@
 import './App.css';
 import React, { Component } from 'react';
 import NavBar from './components/NavBar/NavBar';
-import SearchArea from './components/SearchArea/SearchArea';
 import Wrapper from './components/Wrapper/index';
 import EmployeeGenie from './components/EmployeeGenie/EmployeeGenie';
 
@@ -17,10 +16,7 @@ class App extends Component {
 <div>
 <NavBar />
   <Wrapper>
-
     <EmployeeGenie />
-
-
   </Wrapper>
 </div>
   );

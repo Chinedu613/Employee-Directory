@@ -2,6 +2,7 @@ import React from "react";
 import EmployeeCard from '../EmployeeCard/EmployeeCard'
 
 function EmployeeTable({ employees }) {
+  
   return (
     <table className="table table-hover table-bordered">
       <thead>
