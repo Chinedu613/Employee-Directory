@@ -9,7 +9,7 @@ export default class EmployeeGenie extends Component {
     state = {
         employees: [],
         query: "",
-        employeeFilter: [],
+        employeeFullList: [],
         currentSort: 'default'
     };
 
@@ -19,7 +19,7 @@ export default class EmployeeGenie extends Component {
         const employeeData = await getEmployees();
         this.setState({
             employees: employeeData.data.results,
-            employeeFilter: employeeData.data.results
+            employeeFullList: employeeData.data.results
         })
         };
         // Handles Search
@@ -30,7 +30,7 @@ export default class EmployeeGenie extends Component {
             let newList = [];
 
             if (e.target.value !== '') {
-                currentList = this.state.employeeFilter
+                currentList = this.state.employeeFullList
                 newList = currentList.filter(searchList => {
                     const lowerCase = searchList.name.first.toLowerCase()
                     const filter = this.state.query.toLowerCase();
@@ -38,7 +38,7 @@ export default class EmployeeGenie extends Component {
                     return (lowerCase.includes(filter));
                 });
             } else {
-                    newList = this.state.employees
+                    newList = this.state.employeeFullList
                 }
             return this.setState({employees: newList})
         };

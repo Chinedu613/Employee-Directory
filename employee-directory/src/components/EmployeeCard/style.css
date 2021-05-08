@@ -1,0 +1,8 @@
+.rowBox {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+p {
+    align-self: center;
+}
