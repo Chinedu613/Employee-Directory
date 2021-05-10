@@ -9,7 +9,7 @@ function EmployeeTable(props) {
   const { employees, currentSort, SortDirections} = props;
   
   
-
+console.log(`${SortDirections}`)
 
   return (
     <table className="table table-hover table-bordered">
@@ -18,7 +18,7 @@ function EmployeeTable(props) {
           <th scope="col"><h6>Image</h6></th>
           <th scope="col"><div className='tableHeader'><h6>First Name</h6></div></th>
           <th scope="col"><div className='tableHeader'><h6>Last Name</h6><button onClick={props.onSortChange} className="rounded-circle">
-									<i className={`fas fa-${SortDirections[currentSort].class}`} />
+									<i className={`${SortDirections[currentSort].class}`} />
 								</button></div></th>
           <th scope="col"><div className='tableHeader'><h6>Email</h6></div></th>
           <th scope="col"><div className='tableHeader'><h6>Phone</h6></div></th>

@@ -61,11 +61,11 @@ export default class EmployeeGenie extends Component {
         SortDirections = {
     
             up:{
-                class: 'sort-up',
+                class: 'fas fa-sort-up',
                 fn: (a, b) => (a.name.last > b.name.last ? 1 : -1)
             },
             down:{
-                class: 'sort-down',
+                class: 'fas fa-sort-down',
                 fn: (a, b) => (a.name.last < b.name.last ? 1 : -1)
             },
             default:{

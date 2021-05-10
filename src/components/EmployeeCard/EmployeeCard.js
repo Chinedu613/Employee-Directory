@@ -24,12 +24,12 @@ function EmployeeCard(props) {
       </td>
       <td>
         <div className="rowBox">
-          <p>{props.email}  </p>
+          <a href={`mailto:${props.email}`}><p>{props.email}</p></a>  
         </div>
       </td>
       <td>
         <div className="rowBox">
-          <p>{props.phone} </p>
+        <a href={`tel:${props.phone}`}><p>{props.phone}</p></a>
         </div>
       </td>
     </tr>
